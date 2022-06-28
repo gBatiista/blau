@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Exercício 5.1</title>
-    
+
     <style>
-      main, section {
+      main,
+      section {
         border-color: black;
         border-style: solid;
       }
@@ -31,9 +32,9 @@
     </style>
   </head>
   <body>
-    <header> 
-      <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
-    </header>    
+    <header>
+      <h1 class="title">Exercício 5.1 - JavaEscripito</h1>
+    </header>
     <main class="main-content">
       <section class="center-content">
         <p>Texto padrão do nosso site</p>
@@ -42,7 +43,7 @@
       </section>
     </main>
     <script>
-        /*
+      /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
         - document.getElementsByClassName()
@@ -59,38 +60,45 @@
 
  6 Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
-    function changeParaghaphText () {
-        let paraghaphs = document.getElementsByTagName('p');
-        paraghaphs[1].innerText = 'Daqui a 2 anos eu me vejo muito bem empregado trabalhando em uma empresa que eu goste e dando tudo o que for de melhor para minha familia.'
-    }
+      function changeParaghaphText() {
+        let paraghaphs = document.getElementsByTagName("p");
+        paraghaphs[1].innerText =
+          "Daqui a 2 anos eu me vejo muito bem empregado trabalhando em uma empresa que eu goste e dando tudo o que for de melhor para minha familia.";
+      }
 
-    function changeSquareColor () {
-        let squares = document.getElementsByClassName('main-content');
+      function changeSquareColor() {
+        let squares = document.getElementsByClassName("main-content");
 
-        squares[0].style.backgroundColor = 'rgb(76,164,109)'
-    }
+        squares[0].style.backgroundColor = "rgb(76,164,109)";
+      }
 
-    function changeCenterColor () {
-        let center = document.getElementsByClassName('center-content');
+      function changeCenterColor() {
+        let center = document.getElementsByClassName("center-content");
 
-        center[0].style.backgroundColor = 'white'
-    }
+        center[0].style.backgroundColor = "white";
+      }
 
-    function fixTextH1 () {
-        let h1 = document.getElementsByTagName('h1');
+      function fixTextH1() {
+        let h1 = document.getElementsByTagName("h1");
 
-        h1[0].innerText = 'Exercício 5.1 - JavaScript'
-    }
+        h1[0].innerText = "Exercício 5.1 - JavaScript";
+      }
 
-    function paragraphUpperCase () {
-        let paraghaphs = document.getElementsByTagName('p');
+      function paragraphUpperCase() {
+        let paraghaphs = document.getElementsByTagName("p");
 
         for (paragraph of paraghaphs) {
-            paragraph.style.textTransform = 'uppercase'
+          paragraph.style.textTransform = "uppercase";
         }
-    }
+      }
 
+      function logParagraphText() {
+        let paraghaphs = document.getElementsByTagName("p");
 
+        for (paragraph of paraghaphs) {
+          console.log(paragraph);
+        }
+      }
     </script>
   </body>
 </html>
