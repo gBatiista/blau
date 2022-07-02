@@ -179,3 +179,37 @@ function addColorToDay(event) {
     }
   }
 }
+
+// ============ Add Commitments ============
+
+let addButton = document.getElementById('btn-add');
+let commitment = document.getElementById('task-input');
+addButton.addEventListener('click', addCommitment)
+commitment.addEventListener('keyup', addCommitmentKey)
+
+function addCommitment () {
+  if (commitment.value !== '') {
+    let commitmentElement = document.createElement('li')
+    let commitmentList = document.querySelector('.task-list');
+    
+    commitmentElement.innerText = commitment.value
+    commitmentList.appendChild(commitmentElement)
+    commitment.value = '';
+ } else {
+  alert ('Error, empty field')
+ }
+}
+
+function addCommitmentKey (event) {
+  if (commitment.value !== '' && event.key === 'Enter') {
+    let commitmentElement = document.createElement('li')
+    let commitmentList = document.querySelector('.task-list');
+    
+    commitmentElement.innerText = commitment.value
+    commitmentList.appendChild(commitmentElement)
+    commitment.value = '';
+ } else if (commitment === '') {
+  alert ('Error, empty field')
+ }
+}
+
