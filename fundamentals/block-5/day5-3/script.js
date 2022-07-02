@@ -130,4 +130,21 @@ function addTask(taskname) {
   divParent.appendChild(task);
 }
 
-addTask('cozinhar');
+addTask("cozinhar");
+
+// ============ Add Task Subtitle ============
+
+function taskSubtitle(color) {
+  let subtitle = document.createElement("div");
+  let divParent = document.querySelector(".my-tasks");
+
+  subtitle.className = "task";
+  subtitle.style.backgroundColor = color;
+
+  divParent.appendChild(subtitle);
+}
+
+taskSubtitle('blue');
+
+// ============ Add Task Subtitle ============
+
