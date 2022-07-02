@@ -128,7 +128,7 @@ function addTask(taskname) {
   divParent.appendChild(task);
 }
 
-addTask("cozinhar");
+addTask("Dia de Projeto");
 
 // ============ Add Task Subtitle ============
 
@@ -212,4 +212,3 @@ function addCommitmentKey (event) {
   alert ('Error, empty field')
  }
 }
-
