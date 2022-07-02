@@ -1,3 +1,6 @@
+// ============ Creating Days ============
+
+
 function createDaysOfTheWeek() {
   const weekDays = [
     "Domingo",
@@ -21,8 +24,6 @@ function createDaysOfTheWeek() {
 
 createDaysOfTheWeek();
 
-// Escreva seu código abaixo.
-
 let decemberDaysList = [
   29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
@@ -43,6 +44,9 @@ for (let day of decemberDaysList) {
     li.classList.add("friday");
   }
 }
+
+// ============ Creating Holiday Button ============
+
 
 function createButton(nome, id) {
   let button = document.createElement("button");
@@ -70,6 +74,9 @@ function changeHolidayColor() {
   }
 }
 
+// ============ Creating Friday Button ============
+
+
 createButton("Sexta-feira", "btn-friday");
 
 let fridayButton = document.getElementById("btn-friday");
@@ -92,6 +99,8 @@ function changeFriday() {
   }
 }
 
+// ============ Zoom Animation ============
+
 let days = document.querySelectorAll(".day");
 
 for (let index = 0; index < days.length; index += 1) {
@@ -111,3 +120,5 @@ function zoomLessAnimation(event) {
   let day = event.target;
   day.classList.remove("hover");
 }
+
+// ============ Add Custom Task ============
