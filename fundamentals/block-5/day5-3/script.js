@@ -1,6 +1,5 @@
 // ============ Creating Days ============
 
-
 function createDaysOfTheWeek() {
   const weekDays = [
     "Domingo",
@@ -47,7 +46,6 @@ for (let day of decemberDaysList) {
 
 // ============ Creating Holiday Button ============
 
-
 function createButton(nome, id) {
   let button = document.createElement("button");
   let buttonsContainer = document.querySelector(".buttons-container");
@@ -56,6 +54,8 @@ function createButton(nome, id) {
   button.id = id;
   buttonsContainer.appendChild(button);
 }
+let buttonsContainer = document.querySelector(".buttons-container");
+console.log(buttonsContainer);
 
 createButton("Feriados", "btn-holiday");
 
@@ -75,7 +75,6 @@ function changeHolidayColor() {
 }
 
 // ============ Creating Friday Button ============
-
 
 createButton("Sexta-feira", "btn-friday");
 
@@ -122,3 +121,13 @@ function zoomLessAnimation(event) {
 }
 
 // ============ Add Custom Task ============
+
+function addTask(taskname) {
+  let task = document.createElement("span");
+  let divParent = document.querySelector(".my-tasks");
+
+  task.innerText = taskname;
+  divParent.appendChild(task);
+}
+
+addTask('cozinhar');
