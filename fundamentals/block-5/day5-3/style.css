@@ -26,6 +26,15 @@
   #days {
     margin: 0;
   }
+
+  #days li.hover {
+    font-size: 1.8rem;
+    background-color: lightgreen;
+}
+
+  #days li.mark-holiday {
+    background-color: lightsalmon;
+  }
   
   #days li {
     color: #777;
@@ -35,6 +44,8 @@
     text-align: center;
     vertical-align: middle;
     width: 13.6%;
+    transition: 500ms;
+
   }
   
   .input-container {

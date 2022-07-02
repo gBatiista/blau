@@ -44,16 +44,16 @@ for (let day of decemberDaysList) {
   }
 }
 
-function createHolidayButton(feriados) {
+function createButton(nome, id) {
   let button = document.createElement("button");
   let buttonsContainer = document.querySelector(".buttons-container");
 
-  button.innerText = feriados;
-  button.id = "btn-holiday";
+  button.innerText = nome;
+  button.id = id;
   buttonsContainer.appendChild(button);
 }
 
-createHolidayButton("Feriados");
+createButton("Feriados", "btn-holiday");
 
 let holidayButton = document.getElementById("btn-holiday");
 holidayButton.addEventListener("click", changeHolidayColor);
@@ -62,10 +62,52 @@ function changeHolidayColor() {
   let holidays = document.querySelectorAll(".holiday");
 
   for (let index = 0; index < holidays.length; index += 1) {
-    if (holidays[index].style.backgroundColor === "red") {
-      holidays[index].style.backgroundColor = "rgb(238,238,238)";
+    if (holidays[index].classList.contains("mark-holiday")) {
+      holidays[index].classList.remove("mark-holiday");
     } else {
-      holidays[index].style.backgroundColor = "red";
+      holidays[index].classList.add("mark-holiday");
     }
   }
+}
+
+createButton("Sexta-feira", "btn-friday");
+
+let fridayButton = document.getElementById("btn-friday");
+fridayButton.addEventListener("click", changeFriday);
+
+let originalFriday = [];
+let fridays = document.querySelectorAll(".friday");
+
+for (let index = 0; index < fridays.length; index += 1) {
+  originalFriday.push(fridays[index].innerText);
+}
+
+function changeFriday() {
+  for (let index = 0; index < fridays.length; index += 1) {
+    if (fridays[index].innerText === "SEXTOU!!!") {
+      fridays[index].innerText = originalFriday[index];
+    } else {
+      fridays[index].innerText = "SEXTOU!!!";
+    }
+  }
+}
+
+let days = document.querySelectorAll(".day");
+
+for (let index = 0; index < days.length; index += 1) {
+  days[index].addEventListener("mouseover", zoomPlusAnimation);
+}
+
+function zoomPlusAnimation(event) {
+  let day = event.target;
+  day.classList.add("hover");
+}
+
+for (let index = 0; index < days.length; index += 1) {
+  days[index].addEventListener("mouseleave", zoomLessAnimation);
+}
+
+function zoomLessAnimation(event) {
+  let day = event.target;
+  day.classList.remove("hover");
 }
