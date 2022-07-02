@@ -54,8 +54,6 @@ function createButton(nome, id) {
   button.id = id;
   buttonsContainer.appendChild(button);
 }
-let buttonsContainer = document.querySelector(".buttons-container");
-console.log(buttonsContainer);
 
 createButton("Feriados", "btn-holiday");
 
@@ -144,7 +142,21 @@ function taskSubtitle(color) {
   divParent.appendChild(subtitle);
 }
 
-taskSubtitle('blue');
+taskSubtitle("blue");
 
-// ============ Add Task Subtitle ============
+// ============ Choose Task ============
 
+let tasks = document.querySelectorAll(".task");
+for (let index = 0; index < tasks.length; index += 1) {
+  tasks[index].addEventListener("click", chooseTask);
+}
+
+function chooseTask(event) {
+  let task = event.target;
+
+  if (task.classList.contains("selected")) {
+    task.classList.remove("selected");
+  } else {
+    task.classList.add("selected");
+  }
+}
