@@ -160,3 +160,22 @@ function chooseTask(event) {
     task.classList.add("selected");
   }
 }
+
+// ============ Add Task Color To Day ============
+
+for (let index = 0; index < days.length; index += 1) {
+  days[index].addEventListener("click", addColorToDay);
+}
+
+function addColorToDay(event) {
+  let target = event.target;
+  let taskColor = document.querySelector(".selected");
+
+  if (taskColor !== null) {
+    if (taskColor.style.backgroundColor === target.style.color) {
+      target.style.color = "rgb(119,119,119)";
+    } else {
+      target.style.color = taskColor.style.backgroundColor;
+    }
+  }
+}

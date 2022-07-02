@@ -98,6 +98,10 @@
     vertical-align: middle;
     width: 35px;
   }
+
+  .my-tasks div.selected {
+    border: 5px solid green;
+}
   
   .my-tasks div:hover {
     height: 45px;
@@ -129,6 +133,7 @@
     letter-spacing: 3px;
   }
   
+  
   .task-list {
     margin-top: 20px;
   }
@@ -146,7 +151,7 @@
     letter-spacing: 2px;
     vertical-align: middle;
   }
-  
+
   .week-days-container {
     margin-left: 35px;
   }
